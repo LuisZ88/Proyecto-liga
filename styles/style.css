@@ -1,0 +1,23 @@
+
+.logo{
+    height: 1.5rem;
+    width: 1.5rem;
+}
+
+
+.partidos td:nth-child(2){
+    text-align: center;
+    
+}
+.partidos td:nth-child(3){
+    text-align: right;
+    
+}
+.clasificacion td:first-child{
+    width: 35%;
+}
+.table td[class*=col-3], table th[class*=col-3] {
+    position: static;
+    display: table-cell;
+    float: none;
+}
