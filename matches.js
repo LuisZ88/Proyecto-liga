@@ -18166,39 +18166,3 @@ let partidos = {
     },
   ],
 };
-partidos = partidos.matches
-let table = document.createElement("table");
-table.classList.add("table", "table-dark", "table-hover" ,"table-sm")
-let thead = document.createElement("thead");
-let tbody = document.createElement("tbody");
-table.appendChild(thead);
-table.appendChild(tbody);
-document.getElementById("root").appendChild(table);
-let lineaCabecera = document.createElement("tr")
-thead.appendChild(lineaCabecera)
-let cabecera = ["Local", "Resultado","Visitante"];
-console.log(partidos)
-
-
-for (let i = 0; i < partidos.length; i++) {
-  let local = `<img class= "logo" src="https://crests.football-data.org/${partidos[i].homeTeam.id}.svg"/> ${partidos[i].homeTeam.name}`
-  let visitante = `${partidos[i].awayTeam.name} <img class= "logo" src="https://crests.football-data.org/${partidos[i].awayTeam.id}.svg"/>`
-  let resultado = `${partidos[i].score.fullTime.homeTeam} - ${partidos[i].score.fullTime.awayTeam}`
-  console.log(resultado)
-  if (resultado == `${null} - ${null}`){
-     resultado  = `${partidos[i].utcDate}`
-
-  } 
-  let stats = [local, resultado, visitante]
-  let fila = document.createElement("tr");
-  tbody.appendChild(fila);
-
-  for(let x of stats){
-  let celda = document.createElement("td");
-  fila.appendChild(celda);
-    celda.innerHTML = x;
-    // celda.className = "col";
-  }
-    
-}
-
