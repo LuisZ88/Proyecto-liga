@@ -1,27 +1,61 @@
-
-.logo{
-    height: 1.5rem;
-    width: 1.5rem;
+.logo {
+  height: 1.5rem;
+  width: 1.5rem;
 }
 
+.partidos th:nth-child(3),
+.partidos td:nth-child(3) {
+  text-align: right;
+}
+.partidos td:nth-child(2),
+.partidos th:nth-child(2),
+.partidos th:nth-child(4),
+.partidos td:nth-child(4),
+.partidos td:first-child,
+.partidos th:nth-child(6),
+.partidos td:nth-child(6) {
+  text-align: center;
+}
 
-.partidos td:nth-child(3){
-    text-align: center;
-    
+.clasificacion td:first-child {
+  width: 35%;
 }
-.partidos td:nth-child(2){
-    text-align: right;
-    
+.form1 {
+  background-color: rgb(78, 77, 76);
+  color: blanchedalmond;
 }
-/* .partidos td:nth-child(6){
-    text-align: right;
-    
-} */
-.clasificacion td:first-child{
-    width: 35%;
+.flecha {
+  position: fixed;
+  height: 10vh;
+  width: 10vh;
+  right: 0%;
+  bottom: 0%;
 }
-/* .table td[class*=col-3], table th[class*=col-3] {
-    position: static;
-    display: table-cell;
-    float: none;
-} */
+
+
+h1{
+  color: black;
+  text-align: center;
+  margin-top: 2%;
+ 
+}
+.imgSpin{
+  height: 10vh;
+  width: 10vh;
+  
+}
+.image{
+  animation: rotation 5s infinite linear;
+}
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+.elegirLiga{
+  margin-top: 1%;
+  margin-bottom: 1%;
+}

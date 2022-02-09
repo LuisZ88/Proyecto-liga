@@ -16,6 +16,7 @@ for (let x of cabecera) {
   titulo.innerHTML = x;
 }
 
+
 for (let i = 0; i < clasificacion.length; i++) {
   let pGanados = clasificacion[i].won;
   let pPerdidos = clasificacion[i].lost;
@@ -42,6 +43,7 @@ for (let i = 0; i < clasificacion.length; i++) {
     fila.appendChild(celda);
     celda.innerHTML = x;
   }
+  console.log(clasificacion)
 
   // for (let j = 0; j < stats.length; j++) {
   //   let celda = document.createElement("td");
