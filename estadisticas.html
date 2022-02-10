@@ -10,54 +10,39 @@
 </head>
 <body id="body">
     <div id="root" class="container clasificacion">    
-         <nav class="navbar navbar-light bg-light">
+      <nav class="navbar navbar-light bg-light">
         <div class="container-fluid">
           <a class="navbar-brand" href="/home.html">
-            <img
-              src="/images/LaLiga.svg.png"
-              alt=""
-              width="160"
-              height="51"
-              class="d-inline-block align-text-top"
-            />
+            <img src="/images/LaLiga.svg.png" alt="" width="160" height="51" class="d-inline-block align-text-top" />
           </a>
           <a class="navbar-brand" href="/partidos.html">
-            <img
-              src="/images/variante-de-balon-de-futbol.png"
-              alt=""
-              width="50"
-              height="50"
-              class="d-inline-block align-text-top"
-            />  Partidos
+            <img src="/images/campo-de-futbol.png" alt="" width="50" height="50"
+              class="d-inline-block align-text-top" /> Partidos
           </a>
           <a class="navbar-brand" href="/clasificacion.html">
-            <img
-              src="/images/ranking.png"
-              alt=""
-              width="50"
-              height="51"
-              class="d-inline-block align-text-top"
-            />Clasificación
+            <img src="/images/ranking.png" alt="" width="50" height="51"
+              class="d-inline-block align-text-top" />Clasificación
           </a></a><a class="navbar-brand" href="/estadisticas.html">
-            <img
-              src="/images/grafico-de-linea-ascendente-de-flecha-en-zigzag.png"
-              alt=""
-              width="50"
-              height="51"
-              class="d-inline-block align-text-top"
-            /> Estadisticas
+            <img src="/images/grafico-de-linea-ascendente-de-flecha-en-zigzag.png" alt="" width="50" height="51"
+              class="d-inline-block align-text-top" /> Estadisticas
           </a>
+        </a></a><a class="navbar-brand" href="/equipos.html">
+          <img src="/images/variante-de-balon-de-futbol.png" alt="" width="50" height="51"
+            class="d-inline-block align-text-top" /> Equipos
+        </a>
         </div>
       </nav>
+      
       <div id="elegirLiga" class="elegirLiga">
         <button type="button" class="btn btn-dark" id="ligaSantander">Liga Santander</button>
         <button type="button" class="btn btn-dark" id="premier">Premier League</button>
-        <button type="button" class="btn btn-dark" id="fracia">League 1</button>
+        <button type="button" class="btn btn-dark" id="francia">League 1</button>
       </div>
-    <h1>Media de goles por partido</h1>
+    <h1 id="titulo1"></h1>
    <table id="table1">
    </table>
-   <h1>Menos goles recibidos como visitante</h1>
+   <div class ="divspin"  id="loader">
+    <img class="imgSpin"  src="/images/liga.png"></div> <h1 id="titulo2"></h1>
    <table id="table2">
   </table>
     
@@ -66,7 +51,7 @@
     
     </div>
       
-    <script src="matches.js"></script>
+
     <script src="estadisticas.js"></script>
     
 </body>

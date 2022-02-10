@@ -10,55 +10,38 @@
     <script src="https://kit.fontawesome.com/b3b945e981.js" crossorigin="anonymous"></script>
 </head>
 <body id="body">
-  <a name="arriba"></a>
-    <div id="root" class="container clasificacion">     <nav class="navbar navbar-light bg-light">
+  
+    <div id="root" class="container clasificacion">     
+      <nav class="navbar navbar-light bg-light">
         <div class="container-fluid">
           <a class="navbar-brand" href="/home.html">
-            <img
-              src="/images/LaLiga.svg.png"
-              alt=""
-              width="160"
-              height="51"
-              class="d-inline-block align-text-top"
-            />
+            <img src="/images/LaLiga.svg.png" alt="" width="160" height="51" class="d-inline-block align-text-top" />
           </a>
           <a class="navbar-brand" href="/partidos.html">
-            <img
-              src="/images/variante-de-balon-de-futbol.png"
-              alt=""
-              width="50"
-              height="50"
-              class="d-inline-block align-text-top"
-            />  Partidos
+            <img src="/images/campo-de-futbol.png" alt="" width="50" height="50"
+              class="d-inline-block align-text-top" /> Partidos
           </a>
           <a class="navbar-brand" href="/clasificacion.html">
-            <img
-              src="/images/ranking.png"
-              alt=""
-              width="50"
-              height="51"
-              class="d-inline-block align-text-top"
-            />Clasificación
+            <img src="/images/ranking.png" alt="" width="50" height="51"
+              class="d-inline-block align-text-top" />Clasificación
           </a></a><a class="navbar-brand" href="/estadisticas.html">
-            <img
-              src="/images/grafico-de-linea-ascendente-de-flecha-en-zigzag.png"
-              alt=""
-              width="50"
-              height="51"
-              class="d-inline-block align-text-top"
-            /> Estadisticas
+            <img src="/images/grafico-de-linea-ascendente-de-flecha-en-zigzag.png" alt="" width="50" height="51"
+              class="d-inline-block align-text-top" /> Estadisticas
           </a>
-          <div class="image">
-            <img class="imgSpin" src="/images/liga.png">
-        
+        </a></a><a class="navbar-brand" href="/equipos.html">
+          <img src="/images/variante-de-balon-de-futbol.png" alt="" width="50" height="51"
+            class="d-inline-block align-text-top" /> Equipos
+        </a>
         </div>
-        
-      </nav><div id="elegirLiga" class="elegirLiga">
+      </nav>
+      <div id="elegirLiga" class="elegirLiga">
         <button type="button" class="btn btn-dark" id="ligaSantander">Liga Santander</button>
         <button type="button" class="btn btn-dark" id="premier">Premier League</button>
-        <button type="button" class="btn btn-dark" id="fracia">League 1</button>
-      </div><a
-      href="#arriba"><img class="flecha" src="./images/flecha-superior-derecha.png" alt="img" />
+        <button type="button" class="btn btn-dark" id="francia">League 1</button>
+      </div>
+      <div class ="divspin"  id="loader">
+        <img class="imgSpin"  src="/images/liga.png"></div>
+      <table id="tabla"></table>
   </div> <!-- Footer -->
       <footer class="bg-dark text-center text-white">
         <!-- Grid container -->
@@ -159,7 +142,6 @@
       crossorigin="anonymous"
     ></script>
     
-    <script src="standing.js"></script>
     <script src="clasificacion.js"></script>
     
 </body>

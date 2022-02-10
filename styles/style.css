@@ -17,9 +17,9 @@
   text-align: center;
 }
 
-.clasificacion td:first-child {
+/* .clasificacion td:first-child {
   width: 35%;
-}
+} */
 .form1 {
   background-color: rgb(78, 77, 76);
   color: blanchedalmond;
@@ -39,14 +39,20 @@ h1{
   margin-top: 2%;
  
 }
-.imgSpin{
-  height: 10vh;
-  width: 10vh;
+.divspin{
+  padding-bottom: 90vh;
+  padding-top: 10vh;
   
 }
-.image{
+.imgSpin{
   animation: rotation 5s infinite linear;
+  height: 30vh;
+  width: 30vh;
+  top: 30%;
+  left: 50%;
+  position: absolute;
 }
+
 @keyframes rotation {
   from {
     transform: rotate(0deg);
@@ -58,4 +64,21 @@ h1{
 .elegirLiga{
   margin-top: 1%;
   margin-bottom: 1%;
+}
+.equipo{
+  width: auto;
+  height: auto;
+  max-width:15vh;
+  padding-bottom: 5vh;
+}
+.equipo:hover{
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+  transition: 1s;
+}
+.caja{
+  padding: 10vh;
+  margin: auto;
+  background-color: rgba(0, 0, 0, 0.658);
+  text-align: center;
 }
