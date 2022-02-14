@@ -16,22 +16,7 @@
 .partidos td:nth-child(6) {
   text-align: center;
 }
-.clasificacion tr:nth-child(-n+4) td:nth-child(8){
-  background-color: rgba(58, 151, 100, 0.562);
-  color: black;
-}
-.clasificacion tr:nth-child(6) td:nth-child(8){
-  background-color: rgba(48, 116, 204, 0.699);
-  color: black;
-}
-.clasificacion tr:nth-child(5) td:nth-child(8){
-  background-color: rgba(209, 130, 55, 0.562);
-  color: black;
-}
-.clasificacion tr:nth-child(n+18) td:nth-child(8){
-  background-color: rgba(236, 8, 8, 0.562);
-  color: black;
-}
+
 /* .clasificacion td:first-child {
   width: 35%;
 } */
@@ -96,4 +81,37 @@ h1{
   margin: auto;
   background-color: rgba(0, 0, 0, 0.658);
   text-align: center;
+}
+.leyenda{
+  font-weight: bold;
+  font: bold;
+}
+.leyenda li:nth-child(1){
+  color: rgb(58, 151, 100);
+}
+.leyenda li:nth-child(2){
+  color: rgb(209, 129, 55);
+}
+.leyenda li:nth-child(3){
+  color: rgb(48, 116, 204);
+}
+.leyenda li:nth-child(4){
+  color: rgb(236, 8, 8);
+}
+.clasificacion tr:nth-child(-n+4) td:nth-child(8){
+  background-color: rgba(58, 151, 100, 0.562);
+  color: black;
+}
+.clasificacion tr:nth-child(7) td:nth-child(8){
+  background-color: rgba(48, 116, 204, 0.699);
+  color: black;
+}
+.clasificacion tr:nth-child(6) td:nth-child(8),
+.clasificacion tr:nth-child(5) td:nth-child(8){
+  background-color: rgba(209, 130, 55, 0.562);
+  color: black;
+}
+.clasificacion tr:nth-child(n+18) td:nth-child(8){
+  background-color: rgba(236, 8, 8, 0.562);
+  color: black;
 }
