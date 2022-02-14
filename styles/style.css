@@ -16,7 +16,22 @@
 .partidos td:nth-child(6) {
   text-align: center;
 }
-
+.clasificacion tr:nth-child(-n+4) td:nth-child(8){
+  background-color: rgba(58, 151, 100, 0.562);
+  color: black;
+}
+.clasificacion tr:nth-child(6) td:nth-child(8){
+  background-color: rgba(48, 116, 204, 0.699);
+  color: black;
+}
+.clasificacion tr:nth-child(5) td:nth-child(8){
+  background-color: rgba(209, 130, 55, 0.562);
+  color: black;
+}
+.clasificacion tr:nth-child(n+19) td:nth-child(8){
+  background-color: rgba(236, 8, 8, 0.562);
+  color: black;
+}
 /* .clasificacion td:first-child {
   width: 35%;
 } */
