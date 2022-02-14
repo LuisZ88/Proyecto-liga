@@ -38,7 +38,7 @@ async function getFetch(url) {
       let equipos = data.teams;
       equipos.forEach((x) => {
         let contenido = document.createElement("div");
-        contenido.classList.add("col-3");
+        contenido.classList.add("col-sm-3", "col-6");
         caja.appendChild(contenido);
         contenido.innerHTML = `<a href="${x.website}"><img src="${x.crestUrl}" class="equipo"></a>`;
       });

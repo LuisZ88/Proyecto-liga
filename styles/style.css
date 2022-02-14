@@ -48,9 +48,9 @@ h1{
   animation: rotation 5s infinite linear;
   height: 30vh;
   width: 30vh;
-  top: 30%;
+  top: 50%;
   left: 50%;
-  position: absolute;
+  position: fixed;
 }
 
 @keyframes rotation {
@@ -68,7 +68,7 @@ h1{
 .equipo{
   width: auto;
   height: auto;
-  max-width:15vh;
+  max-width:10vh;
   padding-bottom: 5vh;
 }
 .equipo:hover{
