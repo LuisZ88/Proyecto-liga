@@ -5,6 +5,9 @@ let url1 =
   "https://api.football-data.org/v2/competitions/2021/matches?season=2021",
   url3 =
   "https://api.football-data.org/v2/competitions/2015/matches?season=2021",
+  url4 = "https://api.football-data.org/v2/competitions/2014/teams",
+  url5 = "https://api.football-data.org/v2/competitions/2021/teams",
+  url6 = "https://api.football-data.org/v2/competitions/2015/teams",
   table = document.getElementById("table"),
   thead = document.createElement("thead"),
   tbody = document.createElement("tbody"),
@@ -21,6 +24,26 @@ tbody = document.createElement("tbody");
 
 
 // OBTIENE LOS DATOS DE LA API MEDIANTE FETCH Y REALIZA TODAS LAS FUNCIONES //
+async function getFetchlogos(url) {
+  info = await fetch(url, {
+    method: "GET",
+    headers: {
+      "X-Auth-Token": "5bb281a5a1e445abbe0580d925791a5e",
+    },
+  })
+    .then((response) => {
+      return response.json();
+    })
+    .then((data) => {
+      lista.innerHTML="";
+      let equipos = data.teams;
+      equipos.forEach((x) => {
+        let minilogo= document.createElement("div")
+        lista.appendChild(minilogo)
+        minilogo.innerHTML= `<a href="${x.website}"><img src="${x.crestUrl}" class="minilogo"></a>`
+      });
+    });
+}
 
 async function getFetch(url) {
   show();
@@ -46,7 +69,7 @@ async function getFetch(url) {
   borrar();
   return info;
 }
-
+getFetchlogos(url4)
 getFetch(url1)
 
 
@@ -79,7 +102,7 @@ function generarTabla(array) {
   tbody.innerHTML = "";
   let lineaCabecera = document.createElement("tr");
   thead.appendChild(lineaCabecera);
-  let cabecera = ["Jornada", "Árbitro", "Local", "Resultado", "Visitante", "Fecha"];
+  let cabecera = ["Jornada","Fecha" , "Local", "Resultado", "Visitante", "Árbitro"];
   cabecera.forEach((x) => {
     let titulo = document.createElement("th");
     lineaCabecera.appendChild(titulo);
@@ -109,7 +132,7 @@ function generarTabla(array) {
     dia = dia.toLocaleString("es-ES");
     fila = document.createElement("tr");
     tbody.appendChild(fila);
-    fila.innerHTML = `<td class="col-1">${jornada}</td><td class="col-2">${arbitro}</td><td class="col-2">${local}</td><td class="col-2">${resultado}</td><td class="col-2">${visitante}</td><td class="col-3">${dia}</td>`;
+    fila.innerHTML = `<td class="col-1">${jornada}</td><td class="col-2">${dia}</td><td class="col-2">${local}</td><td class="col-2">${resultado}</td><td class="col-2">${visitante}</td><td class="col-3">${arbitro}</td>`;
   }
 }
 // FILTRO DE LA TABLA DE PARTIDOS (GANADOS,PERDIDOS,EMPATADOS), CON FORMULARIO// 
@@ -186,6 +209,7 @@ ligaSantander.addEventListener("click", () => {
   pGanados.checked = false;
   pPerdidos.checked = false;
   pEmpatados.checked = false;
+  getFetchlogos(url4);
   getFetch(url1);
 });
 
@@ -193,6 +217,7 @@ premier.addEventListener("click", () => {
   pGanados.checked = false;
   pPerdidos.checked = false;
   pEmpatados.checked = false;
+  getFetchlogos(url5);
   getFetch(url2);
 });
 
@@ -200,6 +225,7 @@ francia.addEventListener("click", () => {
   pGanados.checked = false;
   pPerdidos.checked = false;
   pEmpatados.checked = false;
+  getFetchlogos(url6);
   getFetch(url3);
 });
 

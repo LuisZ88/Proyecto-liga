@@ -2,6 +2,9 @@
 let url1 = "https://api.football-data.org/v2/competitions/2014/standings",
   url2 = "https://api.football-data.org/v2/competitions/2021/standings",
   url3 = "https://api.football-data.org/v2/competitions/2015/standings",
+  url4 = "https://api.football-data.org/v2/competitions/2014/teams",
+  url5 = "https://api.football-data.org/v2/competitions/2021/teams",
+  url6 = "https://api.football-data.org/v2/competitions/2015/teams",
   table = document.getElementById("tabla"),
   thead = document.createElement("thead"),
   tbody = document.createElement("tbody"),
@@ -10,17 +13,21 @@ let url1 = "https://api.football-data.org/v2/competitions/2014/standings",
   francia = document.getElementById("francia");
 
 getFetch(url1);
+getFetchlogos(url4);
 // FUNCIONES PARA SELECCIONAR LIGA CAMBIANDO EL PARAM DE LA FUNCION FETCH //
 
 ligaSantander.addEventListener("click", () => {
+  getFetchlogos(url4);
   getFetch(url1)
 })
 
 premier.addEventListener("click", () => {
+  getFetchlogos(url5);
   getFetch(url2)
 })
 
 francia.addEventListener("click", () => {
+  getFetchlogos(url6);
   getFetch(url3)
 })
 
@@ -46,6 +53,26 @@ function getFetch(url) {
       console.log(error);
     });
 
+}
+async function getFetchlogos(url) {
+  info = await fetch(url, {
+    method: "GET",
+    headers: {
+      "X-Auth-Token": "5bb281a5a1e445abbe0580d925791a5e",
+    },
+  })
+    .then((response) => {
+      return response.json();
+    })
+    .then((data) => {
+      lista.innerHTML="";
+      let equipos = data.teams;
+      equipos.forEach((x) => {
+        let minilogo= document.createElement("div")
+        lista.appendChild(minilogo)
+        minilogo.innerHTML= `<a href="${x.website}"><img src="${x.crestUrl}" class="minilogo"></a>`
+      });
+    });
 }
 // CREA UNA TABLA CON CON LOS DATOS RECOGIDOS DEL FETCH//
 

@@ -2,7 +2,18 @@
   height: 1.5rem;
   width: 1.5rem;
 }
-
+.minilogo{
+  width: auto;
+  height: auto;
+  max-width:5vh;
+}
+.lista{
+  display: flex;
+ flex-direction: row;
+ flex-wrap: wrap;
+ justify-content: space-around;
+ align-items: center;
+}
 .partidos th:nth-child(3),
 .partidos td:nth-child(3) {
   text-align: right;

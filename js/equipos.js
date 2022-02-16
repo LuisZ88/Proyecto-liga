@@ -4,7 +4,8 @@ let url1 = "https://api.football-data.org/v2/competitions/2014/teams",
   url3 = "https://api.football-data.org/v2/competitions/2015/teams",
   ligaSantander = document.getElementById("ligaSantander"),
   premier = document.getElementById("premier"),
-  francia = document.getElementById("francia");
+  francia = document.getElementById("francia"),
+  lista = document.getElementById("lista");
   getFetch(url1);
   // FUNCIONES PARA SELECCIONAR LIGA CAMBIANDO EL PARAM DE LA FUNCION FETCH //
   ligaSantander.addEventListener("click", () => {
@@ -34,13 +35,17 @@ async function getFetch(url) {
     .then((data) => {
       let caja = document.getElementById("teams");
       caja.innerHTML = "";
+      lista.innerHTML="";
       borrar();
       let equipos = data.teams;
       equipos.forEach((x) => {
         let contenido = document.createElement("div");
+        let minilogo= document.createElement("div")
+        lista.appendChild(minilogo)
         contenido.classList.add("col-sm-3", "col-6");
         caja.appendChild(contenido);
         contenido.innerHTML = `<a href="${x.website}"><img src="${x.crestUrl}" class="equipo"></a>`;
+        minilogo.innerHTML= `<a href="${x.website}"><img src="${x.crestUrl}" class="minilogo"></a>`
       });
     });
 }
