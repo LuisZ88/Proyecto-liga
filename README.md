@@ -1,6 +1,7 @@
 # Proyecto-liga
 ***
-In this project I created dynamic tables from javascript and to request information throught the fetch to obtain the data in real time. 
+In this project I created dynamic tables from javascript and to request information throught the fetch to obtain the data in real time.
+https://statsl.netlify.app/partidos.html
 ***
  Table of Contents
 1. Clasificacion
